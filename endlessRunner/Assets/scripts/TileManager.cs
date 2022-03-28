@@ -6,7 +6,7 @@ public class TileManager : MonoBehaviour
     private List<GameObject> activeTiles;
     public GameObject[] tilePrefabs;
     public int numberOfTiles = 2;
-    public float zSpawn = 654.5f;
+    public float zSpawn = 652.6f;
     public Transform playerTransform;
     private int previousIndex = 0;
 
@@ -38,6 +38,6 @@ public class TileManager : MonoBehaviour
         tile.transform.position = new Vector3(0, 0, zSpawn);
         //tile.transform.Rotate(0, 0, 0);
 
-        zSpawn += 654.5f;
+        zSpawn += 652.6f;
     }
 }
