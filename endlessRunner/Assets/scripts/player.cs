@@ -18,6 +18,8 @@ public class player : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         anim = transform.GetChild(0).GetComponent<Animator>();
         caps = transform.GetChild(0).GetComponent<CapsuleCollider>();
+
+        GameObject.FindGameObjectWithTag("tileManager").GetComponent<TileManager>().playerTransform = gameObject.transform;
     }
 
     private void Update()
