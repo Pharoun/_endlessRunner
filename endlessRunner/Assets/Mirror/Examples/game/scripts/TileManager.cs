@@ -17,7 +17,7 @@ public class TileManager : MonoBehaviour
 
     void Update()
     {
-        if (playerTransform.position.z + 900 >= zSpawn)
+        if (playerTransform != null && playerTransform.position.z + 900 >= zSpawn)
         {
             if (previousIndex == 0)
                 previousIndex = 1;

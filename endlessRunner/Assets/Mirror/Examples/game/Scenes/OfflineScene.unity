@@ -268,8 +268,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2008127832}
   - component: {fileID: 2008127833}
-  - component: {fileID: 2008127831}
   - component: {fileID: 2008127830}
+  - component: {fileID: 2008127831}
   m_Layer: 0
   m_Name: NetworkRoomManager
   m_TagString: Untagged
@@ -315,33 +315,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2008127829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7d8650c751710349bb9546d1697b9cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
-  runInBackground: 1
-  autoStartServerBuild: 1
-  serverTickRate: 30
-  offlineScene: Assets/Scenes/OfflineScene.unity
-  onlineScene: Assets/Scenes/RoomScene.unity
-  transport: {fileID: 2008127830}
-  networkAddress: localhost
-  maxConnections: 5
-  authenticator: {fileID: 0}
-  playerPrefab: {fileID: 6646993165107642410, guid: cb5ba2e9db81c2941856db37a3ef04d0, type: 3}
-  autoCreatePlayer: 1
-  playerSpawnMethod: 1
-  spawnPrefabs:
-  - {fileID: 1139254171913846, guid: 52f1c9ea06cfd154cb68ff9d1b66fc13, type: 3}
-  showRoomGUI: 1
-  minPlayers: 1
-  roomPlayerPrefab: {fileID: 114033720796874720, guid: deae2134a1d77704b9c595efe69767dd, type: 3}
-  RoomScene: Assets/Scenes/RoomScene.unity
-  GameplayScene: Assets/Scenes/OnlineScene.unity
-  _allPlayersReady: 0
-  roomSlots: []
-  clientIndex: 0
-  rewardPrefab: {fileID: 1139254171913846, guid: 52f1c9ea06cfd154cb68ff9d1b66fc13, type: 3}
+  offsetX: 0
+  offsetY: 0
 --- !u!4 &2008127832
 Transform:
   m_ObjectHideFlags: 0
@@ -365,8 +343,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 2008127829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
+  m_Script: {fileID: 11500000, guid: b242e4ee2ea83284ca8a6ff2ffe1f32e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 0
-  offsetY: 0
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  autoStartServerBuild: 1
+  serverTickRate: 30
+  offlineScene: Assets/Mirror/Examples/game/Scenes/OfflineScene.unity
+  onlineScene: Assets/Mirror/Examples/game/Scenes/RoomScene.unity
+  transport: {fileID: 2008127830}
+  networkAddress: localhost
+  maxConnections: 5
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 2311527398267686937, guid: cb5ba2e9db81c2941856db37a3ef04d0, type: 3}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
+  spawnPrefabs: []
+  showRoomGUI: 1
+  minPlayers: 1
+  roomPlayerPrefab: {fileID: 114033720796874720, guid: 8926fb3a7bc9b1e44af4fb6dbaf363c8, type: 3}
+  RoomScene: Assets/Mirror/Examples/game/Scenes/RoomScene.unity
+  GameplayScene: Assets/Mirror/Examples/game/Scenes/OnlineScene.unity
+  _allPlayersReady: 0
+  roomSlots: []
+  clientIndex: 0
+  rewardPrefab: {fileID: 0}
