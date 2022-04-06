@@ -109,5 +109,21 @@ namespace Mirror.Examples.game
             rb.useGravity = true;
             caps.height = 3.76f;
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "coin")
+            {
+                other.gameObject.GetComponent<AudioSource>().Play();
+                other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+                StartCoroutine(waitBeforeEnabling(other.gameObject));
+            }
+        }
+
+        IEnumerator waitBeforeEnabling(GameObject obj)
+        {
+            yield return new WaitForSeconds(10);
+            obj.GetComponent<MeshRenderer>().enabled = true;
+        }
     }
 }

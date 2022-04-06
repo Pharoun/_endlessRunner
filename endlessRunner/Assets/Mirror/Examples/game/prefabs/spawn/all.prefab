@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 3639864233083841501}
   m_Layer: 0
   m_Name: all
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  clientAuthority: 0
+  clientAuthority: 1
   animator: {fileID: 7116746830396726967}
 --- !u!114 &5687044237916375667
 MonoBehaviour:
