@@ -50,6 +50,19 @@ namespace Mirror.Examples.game
             }
         }
 
+        [Command]
+        void CmdMove()
+        {
+            if (movementSpeed == 500f)
+                RpcMove();
+        }
+
+        [Client]
+        void RpcMove()
+        {
+            rb.velocity = direction;
+        }
+
         private void FixedUpdate()
         {
 
@@ -60,7 +73,7 @@ namespace Mirror.Examples.game
 
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("running") || anim.GetCurrentAnimatorStateInfo(0).IsName("leftStrafe") || anim.GetCurrentAnimatorStateInfo(0).IsName("rightStrafe"))
                 direction.x = Input.GetAxis("Horizontal") * 15;
-            rb.velocity = direction;
+            CmdMove();
 
             if (Input.GetAxis("Horizontal") == 0)
             {
